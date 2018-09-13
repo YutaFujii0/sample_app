@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  def hello
-    render html: "hello, world! today is 6th September"
-  end
+  protect_from_forgery with: :exception
+  include SessionsHelper
 end
